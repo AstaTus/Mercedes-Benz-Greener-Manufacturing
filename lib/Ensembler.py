@@ -8,11 +8,11 @@ class Ensembler:
     def __init__(self, n_folds, base_models):
         self.n_folds = n_folds
         self.base_models = base_models
-        self.level_one_train = np.zeros();
-        self.level_one_test = np.zeros();
-        self.X = np.array()
-        self.y = np.array()
-        self.T = np.array()
+        self.level_one_train = np.zeros((1, 1));
+        self.level_one_test = np.zeros((1, 1));
+        self.X = None
+        self.y = None
+        self.T = None
 
 
     def fit_predict(self, X, y, T):
