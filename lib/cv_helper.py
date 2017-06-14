@@ -23,9 +23,9 @@ class CVHelper:
 
             eval = eval_func(y_sub_test, y_pred)
             cv_results.append(eval)
-            eval_mean =  np.std(cv_results)
-            eval_std = np.std(cv_results)
-            print('eval mean:%f eval std:%f'%(eval_mean, eval_std))
+        eval_mean =  np.mean(cv_results)
+        eval_std = np.std(cv_results)
+        print('eval mean:%f eval std:%f'%(eval_mean, eval_std))
 
         return eval_mean, eval_std
 
